@@ -9,6 +9,7 @@ RUN apt update && apt install -y \
 
 # ++ copy api folder
 ADD api /var/www/geoip
+ADD files/env /var/www/geoip/.env
 
 # ++ install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -24,6 +25,8 @@ ADD files/cron.conf /etc/supervisor/conf.d/cron.conf
 
 # ++ add nginx default config
 ADD files/nginx.default /etc/nginx/sites-available/default
+
+
 
 
 WORKDIR /var/www/geoip

@@ -1,0 +1,9 @@
+APP_ENV=geoip
+APP_DEBUG=false
+APP_KEY=
+APP_TIMEZONE=UTC
+
+GEOIPURL=http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz
+
+CACHE_DRIVER=file
+QUEUE_DRIVER=sync
