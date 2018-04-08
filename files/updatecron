@@ -1,0 +1,6 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+1 1 * * 6     root    run-one -c 'cd /var/www/app/ && ./artisan geoip:download >> /var/www/app/storage/logs/geoip_download.log 2>&1 || true'
+
+#
