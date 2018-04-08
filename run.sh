@@ -20,8 +20,8 @@ service php7.0-fpm stop
 sed -i 's/set_real_ip_from 0.0.0.0;/set_real_ip_from '$NGINX_REALIP_PROXY';/' /etc/nginx/sites-available/default
 
 # ++ run initial database download if not exsits
-if [ ! -f /var/www/app/storage/app/GeoLite2-City.mmdb ]; then
-    cd /var/www/app/ && ./artisan geoip:download
+if [ ! -f /var/www/geoip/storage/app/GeoLite2-City.mmdb ]; then
+    cd /var/www/geoip/ && ./artisan geoip:download
 fi
 
 # super visor deamons start

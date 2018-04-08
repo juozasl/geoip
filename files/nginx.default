@@ -3,7 +3,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
-    root /var/www/app/public;
+    root /var/www/geoip/public;
     index index.php index.html index.htm index.nginx-debian.html;
 
     access_log /var/www/log/access.log;
